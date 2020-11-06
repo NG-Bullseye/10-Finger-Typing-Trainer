@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Starter {
 
-    private final boolean INTRO=false;
+    private final boolean INTRO=true;
 
     private  int wortLänge=0;
     private int repetitionTime=0;
@@ -44,7 +44,16 @@ public class Starter {
 
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        System.out.println("Gib eine der folgenden Trainingsnummer ein oder schreib 'kombi' :");
+        System.out.println("Gib eine der folgenden Trainingsnummer ein");
+        try{
+            Thread.sleep(2000);
+        }catch (Exception e){
+        }
+        System.out.println("oder schreib 'kombi' um mehrere Programme zu kombinieren");
+        try{
+            Thread.sleep(3000);
+        }catch (Exception e){
+        }
         System.out.println("1 standardHaltung jklö");
         System.out.println("2 oberenVierDerStandardHaltung uiop");
         System.out.println("3 standardHaltung asdf");
@@ -62,7 +71,7 @@ public class Starter {
         String input;
         while((!validInput)||(!kombiDone&&combination)){
             if(combination){
-                System.out.println("Ausgewählt: ");
+                System.out.println("Ausgewählt: "+auswahl);
                 input=s.next();
                 if(input.equals("y")){
                     kombiDone = true;
